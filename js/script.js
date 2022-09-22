@@ -42,7 +42,7 @@ function setTime(date) {
     
     function displayWeather(response) {
       document.querySelector("#city-name").innerHTML = response.data.name;
-      document.querySelector("#main-temp").innerHTML = Math.round(response.data.main.temp) + "°";
+      document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp) + "°";
     }
     
     function citySearch(city) {
@@ -78,7 +78,7 @@ function setTime(date) {
     mainTime.innerHTML = setTime(date);
     mainDate.innerHTML = setDate(date);
     
-    let searchButton = document.querySelector("#search-form");
+    let searchButton = document.querySelector("#city-search");
     searchButton.addEventListener("submit", searchSubmit);
     
     let currentLocationEmoji = document.querySelector("#current-location-emoji");
