@@ -6,7 +6,7 @@ body {
     border: 1px solid #fff;
     border-radius: 50px;
     display: block;
-    margin: 100px auto;
+    margin: 100px auto 0px auto;
     max-width: 80%;
     padding: 40px;
   }
@@ -87,4 +87,9 @@ body {
   
   #fahrenheit, #celsius {
     text-decoration: none;
+  }
+
+  #link-footer {
+    font-size: 16px;
+    padding-left: 225px;
   }
