@@ -41,6 +41,8 @@ body {
   #deg-switch {
     font-size: 14px;
     display: inline;
+    position: relative;
+    bottom: 8px;
   }
   
   #week-precip {
