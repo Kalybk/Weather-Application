@@ -32,63 +32,68 @@
 
         <div class="city-name" id="city-name">San Antonio</div>
         <div class="row main-temp">
-            <div class="col-2">
+            <div class="col-1">
                 <span id="weather-emoji">⛅</span>
             </div>
-            <div class="col-6"> 
+            <div class="col-7"> 
                 <div class="d-flex weather-temperature">
-                <span id="temperature">80</span><span id="units">°C | °F</span>
+                <span id="temperature">80</span><span id="units"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
             </div>
             </div>
 
             <div class="col-4 condition-list">
                 <ul>
-                    <li>Humidity:%</li>
-                    <li>Wind:mph</li>
-                    <li>Precipitation:%</li>
+                    <li id="humidity">Humidity:%</li>
+                    <li id="wind">Wind:mph</li>
                 </ul>
             </div>
         </div>
 
 
         <div class="row" id="week-temp">
-            <div class="col-2">
-                Sun 🌥️ <br />
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
-                <div id="week-precip">Precip: %</div>
-            </div>
-            <div class="col-2" id="day-one-label">
-                Mon 🌥️ <br />
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
-                <div id="week-precip">Precip: %</div>
-            </div>
-            <div class="col-2" id="day-two-label">
-                Tue 🌥️ <br />
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
-                <div id="week-precip">Precip: %</div>
-            </div>
-            <div class="col-2" id="day-three-label">
-                Wed 🌥️ <br />
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
-                <div id="week-precip">Precip: %</div>
-            </div>
-            <div class="col-2" id="day-four-label">
-                Thu 🌥️ <br />
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
-                <div id="week-precip">Precip: %</div>
-            </div>
-            <div class="col-2" id="day-five-label">
-                Fri 🌥️ <br />
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
-                <div id="week-precip">Precip: %</div>
 
+            <div class="col-2" id="day-one">
+                <div id="weekday-one">Sun</div>
+                <div id="emoji-one">🌦</div>
+                <span id="temp-high">80°</span> |
+                <span id="temp-low">60°</span>
             </div>
+
+            <div class="col-2" id="day-two">
+                <div id="weekday-two">Mon</div>
+                <div id="emoji-two">🌦</div>
+                <span id="temp-high">80°</span> |
+                <span id="temp-low">60°</span>
+            </div>
+
+            <div class="col-2" id="day-three">
+                <div id="weekday-three">Tue</div>
+                <div id="emoji-three">🌦</div>
+                <span id="temp-high">80°</span> |
+                <span id="temp-low">60°</span>
+            </div>
+
+            <div class="col-2" id="day-four">
+                <div id="weekday-four">Wed</div>
+                <div id="emoji-four">🌦</div>
+                <span id="temp-high">80°</span> |
+                <span id="temp-low">60°</span>
+            </div>
+
+            <div class="col-2" id="day-five">
+                <div id="weekday-five">Thur</div>
+                <div id="emoji-five">🌦</div>
+                <span id="temp-high">80°</span> |
+                <span id="temp-low">60°</span>
+            </div>
+
+            <div class="col-2" id="day-six">
+                <div id="weekday-six">Fri</div>
+                <div id="emoji-six">🌦</div>
+                <span id="temp-high">80°</span> |
+                <span id="temp-low">60°</span>
+            </div>
+
         </div>
     </div>
     <div class="link-footer" id="link-footer">
