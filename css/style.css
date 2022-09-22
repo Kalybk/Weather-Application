@@ -1,6 +1,13 @@
 body {
     background: lightgrey;
   }
+
+ul {
+    list-style-type: none;  
+    padding: 0; 
+    margin: 0 auto; 
+  }
+
   .container {
     background: #fff;
     border: 1px solid #fff;
@@ -10,50 +17,43 @@ body {
     max-width: 80%;
     padding: 40px;
   }
-  
-  #week-temp {
-    text-align: center;
-    font-size: 16px;
-    padding: 40px 10px;
-  }
-  
-  #city-name {
+
+  .city-name {
     text-transform: capitalize;
     font-weight: 600;
     text-align: left;
     font-size: 40px;
   }
   
-  #main-temp {
-    text-align: left;
-    font-size: 35px;
-    display: inline;
+  .condition-list {
+    font-size: 18px;
+  }
+
+  #main-time {
+    font-size: 20px;
+    font-weight: 400;
   }
   
-  #temp-high {
-    font-weight: 700;
+  #main-date {
+    font-size: 22px;
+    font-weight: 400;
   }
-  
-  #temp-low {
-    font-style: italic;
-  }
-  
-  #deg-switch {
-    font-size: 14px;
-    display: inline;
-    position: relative;
-    bottom: 8px;
-  }
-  
-  #week-precip {
-    font-size: 14px;
-  }
-  
+
   #weather-emoji {
     text-align: center;
     font-size: 90px;
   }
-  
+
+  #temperature {
+    font-size: 40px;
+  }
+
+  #units {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+  }
+      
   #search-button {
     border: 1px solid black;
     padding: 3px;
@@ -74,19 +74,27 @@ body {
     background: none;
     border: none;
   }
-  
-  #main-time {
-    font-size: 20px;
-    font-weight: 400;
-  }
-  
-  #main-date {
-    font-size: 22px;
-    font-weight: 400;
-  }
-  
+    
   #fahrenheit, #celsius {
     text-decoration: none;
+  }
+
+  #week-temp {
+    text-align: center;
+    font-size: 16px;
+    padding: 40px 10px;
+  }
+
+  #temp-high {
+    font-weight: 700;
+  }
+  
+  #temp-low {
+    font-style: italic;
+  }
+    
+  #week-precip {
+    font-size: 14px;
   }
 
   #link-footer {

@@ -18,29 +18,35 @@
             <div class="col-8 calendar">
                 <div class="time" id="main-time"></div>
                 <div class="day" id="main-date"></div>
+            </div>
 
-                </div>
-            <div class="col-4" id="search-form">
+            <div class="col-4">
+                <div class="d-flex search-form">
                 <form class="city-search" id="city-search">
                     <input type="search" placeholder="Enter a city" id="enter-city" autocomplete="off" />
                     <input type="submit" value="Search" id="search-button" class="form-control" />
                     <input type="button" value="📍" id="current-location-emoji" />
                 </form></div>
+            </div>
         </div>
+
+        <div class="city-name">San Antonio</div>
         <div class="row main-temp">
-            <div class="col-2" id="weather-emoji">🌤️</div>
-            <div class="col-6">
-                <div class="city-name" id="city-name">City</div>
-                <div class="main-temp" id="main-temp">80°</div>
-                <div class="deg-switch" id="deg-switch">
-                    <a href="#" id="fahrenheit"> °F</a> | <a href="#" id="celsius">°C</a>
-                </div>
+            <div class="col-2">
+                <span id="weather-emoji">⛅</span>
+            </div>
+            <div class="col-6"> 
+                <div class="d-flex weather-temperature">
+                <span id="temperature">80</span><span id="units">°C | °F</span>
+            </div>
             </div>
 
-            <div class="col-4">
-                <div class="humidity">Humidity: %</div>
-                <div class="wind">Wind: mph</div>
-                <div class="precip">Precipitation: %</div>
+            <div class="col-4 condition-list">
+                <ul>
+                    <li>Humidity:%</li>
+                    <li>Wind:mph</li>
+                    <li>Precipitation:%</li>
+                </ul>
             </div>
         </div>
 
@@ -86,7 +92,7 @@
         </div>
     </div>
     <div class="link-footer" id="link-footer">
-        <a href="https://github.com/KayeBK/Weather-Application">Open-source code</a> by Kaye Kinser
+        <a href="https://github.com/KayeBK/Weather-Application" target="_blank">Open-source code</a> by Kaye Kinser
     </div>
     
     <script src="js/script.js">
