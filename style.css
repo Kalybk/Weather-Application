@@ -1,0 +1,87 @@
+body {
+    background: lightgrey;
+  }
+  .container {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: block;
+    margin: 100px auto;
+    max-width: 80%;
+    padding: 40px;
+  }
+  
+  
+  #week-temp {
+    text-align: center;
+    font-size: 16px;
+    padding: 40px 10px;
+  }
+  
+  #city-name {
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: left;
+    font-size: 40px;
+  }
+  
+  #main-temp {
+    text-align: left;
+    font-size: 35px;
+  }
+  
+  #temp-high {
+    font-weight: 700;
+  }
+  
+  #temp-low {
+    font-style: italic;
+  }
+  
+  #deg-switch {
+    font-size: 14px;
+  }
+  
+  #week-precip {
+    font-size: 14px;
+  }
+  
+  #weather-emoji {
+    text-align: center;
+    font-size: 90px;
+  }
+  
+  #search-button {
+    border: 1px solid black;
+    padding: 3px;
+    width: 60px;
+    display: inline;
+    background: none;
+    font-size: 16px;
+  }
+  
+  #enter-city {
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px solid (0, 0, 0, 0.3);
+  }
+  
+  #current-location-emoji {
+    font-size: 22px;
+    background: none;
+    border: none;
+  }
+  
+  #main-time {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  #main-date {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  #fahrenheit, #celsius {
+    text-decoration: none;
+  }
