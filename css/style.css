@@ -14,7 +14,7 @@ ul {
     border-radius: 50px;
     display: block;
     margin: 100px auto 0px auto;
-    max-width: 80%;
+    max-width: 60%;
     padding: 40px;
   }
 
@@ -40,8 +40,8 @@ ul {
   }
 
   #weather-emoji {
-    text-align: center;
-    font-size: 90px;
+    padding: 30px;
+    font-size: 80px;
   }
 
   #temperature {
@@ -95,5 +95,5 @@ ul {
     
   #link-footer {
     font-size: 16px;
-    padding-left: 225px;
+    padding-left: 400px;
   }

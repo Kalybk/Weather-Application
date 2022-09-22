@@ -41,10 +41,12 @@ function setTime(date) {
     
     
     function displayWeather(response) {
-      document.querySelector("#city-name").innerHTML = response.data.name;
       document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
       document.querySelector("#humidity").innerHTML = "Humidity: " + response.data.main.humidity + "%";
-      document.querySelector("#wind").innerHTML = "Wind Speed: " + Math.round(response.data.wind.speed) + "Km/h";
+      document.querySelector("#wind").innerHTML = "Wind Speed: " + Math.round(response.data.wind.speed) + " Km/h";
+
+    let cityElement = document.querySelector("#city-name");
+    cityElement.innerHTML = response.data.name + " , " + response.data.sys.country
     }
     
     function citySearch(city) {
