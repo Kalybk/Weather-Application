@@ -11,7 +11,6 @@ body {
     padding: 40px;
   }
   
-  
   #week-temp {
     text-align: center;
     font-size: 16px;
@@ -28,6 +27,7 @@ body {
   #main-temp {
     text-align: left;
     font-size: 35px;
+    display: inline;
   }
   
   #temp-high {
@@ -40,6 +40,7 @@ body {
   
   #deg-switch {
     font-size: 14px;
+    display: inline;
   }
   
   #week-precip {
