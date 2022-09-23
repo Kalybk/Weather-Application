@@ -29,6 +29,15 @@ ul {
     font-size: 18px;
   }
 
+  .weekday {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .emoji {
+    font-size: 40px;
+  }
+
   #main-time {
     font-size: 20px;
     font-weight: 400;
