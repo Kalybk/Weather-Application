@@ -40,6 +40,7 @@ function setTime(timestamp) {
     }
     
     function displayWeather(response) {
+      document.querySelector("#city-name").innerHTML = `${response.data.name}, ${response.data.sys.country}`;
       document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
       document.querySelector("#humidity").innerHTML = "Humidity: " + response.data.main.humidity + "%";
       document.querySelector("#wind").innerHTML = "Wind Speed: " + Math.round(response.data.wind.speed);
@@ -48,9 +49,6 @@ function setTime(timestamp) {
       document.querySelector("#high-temp-main").innerHTML = Math.round(response.data.main.temp_max);
       document.querySelector("#low-temp-main").innerHTML = Math.round(response.data.main.temp_min);
       document.querySelector("#weather-icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
-    let cityElement = document.querySelector("#city-name");
-    cityElement.innerHTML = response.data.name + ", " + response.data.sys.country
     }
     
     function citySearch(city) {

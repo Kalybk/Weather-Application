@@ -115,9 +115,7 @@ ul {
     padding: 40px 10px;
   }
     
-.week-forecast {
-  border: 1px solid black;
-  border-radius: 5px;
+  .week-forecast {
   margin: 0 auto;
   padding: 30px 40px;
 }
