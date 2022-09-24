@@ -1,5 +1,9 @@
-function setTime(date) {
+function setTime(timestamp) {
+  let date = new Date(timestamp);
     let hours = date.getHours();
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
     let minutes = date.getMinutes();
     if (minutes < 10) {
       minutes = `0${minutes}`;
@@ -18,7 +22,8 @@ function setTime(date) {
     return `${hours}:${minutes} ${day},`
     }
     
-    function setDate(date) {
+    function setDate(timestamp) {
+      let date = new Date(timestamp);
       let days = date.getDate();
       let monthIndex = date.getMonth();
       let months = [
@@ -39,11 +44,12 @@ function setTime(date) {
       return `${month} ${days}`
     }
     
-    
     function displayWeather(response) {
       document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
       document.querySelector("#humidity").innerHTML = "Humidity: " + response.data.main.humidity + "%";
       document.querySelector("#wind").innerHTML = "Wind Speed: " + Math.round(response.data.wind.speed) + " Km/h";
+      document.querySelector("#main-date").innerHTML = setDate(response.data.dt * 1000);
+      document.querySelector("#main-time").innerHTML = "Last updated: " + setTime(response.data.dt * 1000);
 
     let cityElement = document.querySelector("#city-name");
     cityElement.innerHTML = response.data.name + " , " + response.data.sys.country
@@ -76,11 +82,6 @@ function setTime(date) {
       navigator.geolocation.getCurrentPosition(findLocation);
     }
     
-    let mainDate = document.querySelector("#main-date");
-    let mainTime = document.querySelector("#main-time");
-    let date = new Date();
-    mainTime.innerHTML = setTime(date);
-    mainDate.innerHTML = setDate(date);
     
     let searchButton = document.querySelector("#city-search");
     searchButton.addEventListener("submit", searchSubmit);
