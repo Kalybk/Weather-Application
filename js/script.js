@@ -53,7 +53,7 @@ function setTime(timestamp) {
 
       let forecastHTML = `<div class="row">`;
       forecast.forEach(function(forecastDay, index) {
-        if (index < 6) {
+        if (index < 7 && index > 0) {
 
       forecastHTML = forecastHTML + `
       <div class="col-2">
@@ -91,7 +91,16 @@ function getForecast(coordinates) {
 
 
       celsiusTemperature = response.data.main.temp;
+      celsiusTempHigh = response.data.main.temp_max;
+      celsiusTempLow = response.data.main.temp_min;
       metricSpeed = response.data.wind.speed;
+
+
+      let celsiusHighElement = document.querySelector("#high-temp-main");
+      celsiusHighElement.innerHTML = Math.round(celsiusTempHigh);
+
+      let celsiusLowElement = document.querySelector("#low-temp-main");
+      celsiusLowElement.innerHTML = Math.round(celsiusTempLow);
 
       let speedElement = document.querySelector("#wind");
       speedElement.innerHTML = Math.round(metricSpeed);
@@ -150,6 +159,14 @@ function getForecast(coordinates) {
       unitList[1].innerHTML = `°F`;
       unitList[2].innerHTML = `°F`;
 
+      let highTempElement = document.querySelector("#high-temp-main");
+      let fahrenheitTempHigh = (celsiusTempHigh * 9) / 5 + 32;
+      highTempElement.innerHTML = Math.round(fahrenheitTempHigh);
+
+      let lowTempElement = document.querySelector("#low-temp-main");
+      let fahrenheitTempLow = (celsiusTempLow * 9) / 5 + 32;
+      lowTempElement.innerHTML = Math.round(fahrenheitTempLow);
+
       let speedElement = document.querySelector("#wind");
       let imperialSpeed = metricSpeed * .62137;
       speedElement.innerHTML = Math.round(imperialSpeed);
@@ -168,6 +185,12 @@ function getForecast(coordinates) {
       unitList[1].innerHTML = `°C`;
       unitList[2].innerHTML = `°C`;
 
+      let highTempElement = document.querySelector("#high-temp-main");
+      highTempElement.innerHTML = Math.round(celsiusTempHigh);
+
+      let lowTempElement = document.querySelector("#low-temp-main");
+      lowTempElement.innerHTML = Math.round(celsiusTempLow);
+
       let speedElement = document.querySelector("#wind");
       speedElement.innerHTML = Math.round(metricSpeed);
       let setUnit = document.querySelector("#speed-unit");
@@ -175,7 +198,10 @@ function getForecast(coordinates) {
     }
 
     let celsiusTemperature = null;
+    let celsiusTempHigh = null;
+    let celsiusTempLow = null;
     let metricSpeed = null;
+
 
     let fahrenheitLink = document.querySelector("#fahrenheit");
     fahrenheitLink.addEventListener("click", displayFahrenheit);
