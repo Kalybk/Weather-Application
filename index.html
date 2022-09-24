@@ -15,13 +15,13 @@
 <body>
     <div class="container">
         <div class="row header">
-            <div class="col-8 calendar">
+            <div class="col-7 calendar">
                 <div class="time" id="main-time"></div>
-                <div class="day" id="main-date"></div>
             </div>
 
-            <div class="col-4">
+            <div class="col-5">
                 <div class="d-flex search-form">
+                <span id="units"><a href="#" id="celsius">°C</a>|<a href="#" id="fahrenheit">°F</a></span>
                 <form class="city-search" id="city-search">
                     <input type="search" placeholder="Enter a city" id="enter-city" autocomplete="off" />
                     <input type="submit" value="Search" id="search-button" class="form-control" />
@@ -31,74 +31,75 @@
         </div>
 
         <div class="city-name" id="city-name"></div>
+        <div class="weather-description" id="weather-description"></div>
         <div class="row main-temp">
             <div class="col-2">
-                <span id="weather-emoji">⛅</span>
+                <img src="https://openweathermap.org/img/wn/04d@2x.png" id="weather-icon"></img>
             </div>
             <div class="col-6"> 
-                <div class="d-flex weather-temperature">
-                <span id="temperature"></span><span id="units"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
-            </div>
-            <div class="high-low-temp"><span class="high-temp-main"></span> | <span class="low-temp-main"></span></div>
+                <span id="temperature"></span><span class="main-unit" id="unit">°C</span>
             </div>
 
             <div class="col-4 condition-list">
                 <ul>
+                    <li>High: <span id="high-temp-main"></span><span class="high-low" id="unit">°C</span></li>
+                    <li>Low: <span id="low-temp-main"></span><span class="high-low" id="unit">°C</span></li>
                     <li id="humidity"></li>
                     <li id="wind"></li>
                 </ul>
             </div>
         </div>
+        
+        <div id="forecast-title">6 Day Forecast</div>
 
+        <div class="d-flex" id="week-temp">
 
-        <div class="row" id="week-temp">
-
-            <div class="col-2" id="day-one">
+            <div class="week-forecast" id="day-one">
                 <div id="weekday-one" class="weekday">Sun</div>
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
+                <strong id="temp-high">80°</strong> |
+                <em id="temp-low">60°</em>
                 <div id="emoji-one" class="emoji">🌦</div>
             </div>
 
-            <div class="col-2" id="day-two">
+            <div class="week-forecast" id="day-two">
                 <div id="weekday-two" class="weekday">Mon</div>
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
+                <strong id="temp-high">80°</strong> |
+                <em id="temp-low">60°</em>
                 <div id="emoji-two" class="emoji">🌦</div>
             </div>
 
-            <div class="col-2" id="day-three">
+            <div class="week-forecast" id="day-three">
                 <div id="weekday-three" class="weekday">Tue</div>
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
+                <strong id="temp-high">80°</strong> |
+                <em id="temp-low">60°</em>
                 <div id="emoji-three" class="emoji">🌦</div>
             </div>
 
-            <div class="col-2" id="day-four">
+            <div class="week-forecast" id="day-four">
                 <div id="weekday-four" class="weekday">Wed</div>
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
+                <strong id="temp-high">80°</strong> |
+                <em id="temp-low">60°</em>
                 <div id="emoji-four" class="emoji">🌦</div>
             </div>
 
-            <div class="col-2" id="day-five">
+            <div class="week-forecast" id="day-five">
                 <div id="weekday-five" class="weekday">Thu</div>
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
+                <strong id="temp-high">80°</strong> |
+                <em id="temp-low">60°</em>
                 <div id="emoji-five" class="emoji">🌦</div>
             </div>
 
-            <div class="col-2" id="day-six">
+            <div class="week-forecast" id="day-six">
                 <div id="weekday-six" class="weekday">Fri</div>
-                <span id="temp-high">80°</span> |
-                <span id="temp-low">60°</span>
+                <strong id="temp-high">80°</strong> |
+                <em id="temp-low">60°</em>
                 <div id="emoji-six" class="emoji">🌦</div>
             </div>
 
         </div>
     </div>
     <div class="link-footer" id="link-footer">
-        <a href="https://github.com/KayeBK/Weather-Application" target="_blank">Open-source code</a> by Kaye Kinser
+         <span id="footer-text">Developed by Kaye Kinser. Open-source code on <a href="https://github.com/KayeBK/Weather-Application" target="_blank">GitHub</a> and hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>.</span>
     </div>
     
     <script src="js/script.js">

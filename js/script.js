@@ -19,40 +19,38 @@ function setTime(timestamp) {
       "Saturday"
     ];
     let day = weekdays[dayIndex];
-    return `${hours}:${minutes} ${day},`
-    }
-    
-    function setDate(timestamp) {
-      let date = new Date(timestamp);
-      let days = date.getDate();
-      let monthIndex = date.getMonth();
-      let months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ];
-      let month = months[monthIndex];
-      return `${month} ${days}`
+    let days = date.getDate();
+    let monthIndex = date.getMonth();
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    let month = months[monthIndex];
+    return `${hours}:${minutes} ${day}, ${month} ${days}`
     }
     
     function displayWeather(response) {
       document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
       document.querySelector("#humidity").innerHTML = "Humidity: " + response.data.main.humidity + "%";
-      document.querySelector("#wind").innerHTML = "Wind Speed: " + Math.round(response.data.wind.speed) + " Km/h";
-      document.querySelector("#main-date").innerHTML = setDate(response.data.dt * 1000);
+      document.querySelector("#wind").innerHTML = "Wind Speed: " + Math.round(response.data.wind.speed);
       document.querySelector("#main-time").innerHTML = "Last updated: " + setTime(response.data.dt * 1000);
+      document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
+      document.querySelector("#high-temp-main").innerHTML = Math.round(response.data.main.temp_max);
+      document.querySelector("#low-temp-main").innerHTML = Math.round(response.data.main.temp_min);
+      document.querySelector("#weather-icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
     let cityElement = document.querySelector("#city-name");
-    cityElement.innerHTML = response.data.name + " , " + response.data.sys.country
+    cityElement.innerHTML = response.data.name + ", " + response.data.sys.country
     }
     
     function citySearch(city) {
