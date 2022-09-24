@@ -134,3 +134,8 @@ ul {
   .weather-forecast-temperature-max {
     font-weight: bold;
   }
+  
+  #forecast-unit {
+    font-size: 13px;
+    text-align: center;
+  }

@@ -75,7 +75,7 @@ function setTime(timestamp) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = `ab8e7ef210556986d1c9a75d6007b825`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -194,7 +194,7 @@ function getForecast(coordinates) {
       let speedElement = document.querySelector("#wind");
       speedElement.innerHTML = Math.round(metricSpeed);
       let setUnit = document.querySelector("#speed-unit");
-      setUnit.innerHTML = " KM/H";
+      setUnit.innerHTML = " M/H";
     }
 
     let celsiusTemperature = null;
